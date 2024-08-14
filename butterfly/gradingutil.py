@@ -1,6 +1,6 @@
 from collections import namedtuple
 try:
-    xrange(10)
+    range(10)
 except:
     xrange = range
 
@@ -170,7 +170,7 @@ def grading_by_length_ds_de(ln, ds, de):
         else:
             k = r ** (1.0 / (n - 1))
     finally:
-        ln = sum(ds * k ** i for i in xrange(0, n))
+        ln = sum(ds * k ** i for i in range(0, n))
         r = k ** (n - 1)
         de = r * ds
     return GradientProperties(ln, k, r, n, ds, de)

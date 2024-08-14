@@ -444,6 +444,6 @@ def load_of_boundary_file(path_to_file):
                 count = int(line.split()[-1][:-1])
                 nl = next(bf)
                 st = int(nl.split()[-1][:-1])
-                ind.append(xrange(st, st + count))
+                ind.append(range(st, st + count))
 
     return {i for rng in ind for i in rng}

@@ -40,7 +40,7 @@ class WindTunnel(object):
         Zref: Reference height for wind velocity in meters (default: 10).
     """
 
-    def __init__(self, name, inlet, outlet, sides, top, ground, test_geomtries,
+    def __init__(self, name: str, inlet, outlet, sides, top, ground, test_geomtries,
                  roughness, meshing_parameters=None, Zref=None, convertToMeters=1):
         """Init wind tunnel."""
         self.name = str(name)

@@ -131,7 +131,7 @@ class Case(object):
         # place holder for refinment regions
         # use .add_refinementRegions to add regions to case
         self.__refinementRegions = []
-        self.runmanager = RunManager(self.project_name)
+        # self.runmanager = RunManager(self.project_name)
 
     @classmethod
     def from_folder(cls, path, name=None, convert_from_meters=1):

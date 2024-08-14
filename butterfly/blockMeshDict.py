@@ -733,7 +733,7 @@ class BlockMeshDict(FoamFile):
                if isinstance(attr['faces'][0], tuple) else
                _body % (name, attr['type'],
                         '\n\t' + str(attr['faces']).replace(",", ""))
-               for name, attr in self.boundary.iteritems())
+               for name, attr in self.boundary.items())
 
         return 'boundary\n(%s);\n' % '\n'.join(col)
 
@@ -762,7 +762,7 @@ class BlockMeshDict(FoamFile):
             groups[p[2]].append((p[0], p[1]))
 
         z_values = sorted(groups.keys())
-        point_groups = groups.values()
+        point_groups = list(groups.values())
 
         assert len(z_values) == 2, \
             'Number of Z values must be 2 not {}: {}.'.format(len(z_values),
