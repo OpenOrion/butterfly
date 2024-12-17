@@ -5,8 +5,11 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="lbt-butterfly",
-    use_scm_version=True,
-    setup_requires=['setuptools_scm'],
+    
+    # use_scm_version=True,
+    # setup_requires=['setuptools_scm'],
+    version="1.0.0",
+
     author="Ladybug Tools",
     author_email="info@ladybug.tools",
     description="A light python API for creating and running OpenFoam cases for CFD simulation.",
@@ -16,6 +19,12 @@ setuptools.setup(
     packages=setuptools.find_packages(exclude=["tests"]),
     classifiers=[
         "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
         "Programming Language :: Python :: Implementation :: CPython",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Operating System :: Windows 10"
